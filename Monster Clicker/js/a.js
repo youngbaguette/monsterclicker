@@ -57,7 +57,7 @@ function update(){
 // runs once every second, incrementing the kills done by npcs
 setInterval(() => {
     var monstersKilled = 0;
-    monstersKilled += heroLvl + (Math.floor(heroLvl * 4));
+    monstersKilled += heroLvl + (Math.floor(heroLvl * (1/4)));
     monstersKilled += (linkLvl * 2) + Math.floor((1/4) * Math.pow(linkLvl, 2));
     kills(monstersKilled);
     update()
@@ -83,8 +83,8 @@ function buyLink(){
 
 // setting npc costs
 function updateHeroCost() {
-    heroCost = 15 + (Math.floor((1/8) * Math.pow(heroLvl, 2)));
+    heroCost = 15 + heroLvl + (Math.floor((1/8) * Math.pow(heroLvl, 3)));
 }
 function updateLinkCost() {
-    linkCost = 45 + (Math.floor((1/2) * Math.pow(linkLvl, 2)));
+    linkCost = 45 + linkLvl + (Math.floor((1/2) * Math.pow(linkLvl, 3)));
 }
