@@ -21,6 +21,7 @@ function kills(monsters) {
     update();
 }
 
+// unga bunag?
 // saves game
 function save(){
     localStorage.setItem("killCount", killCount);
