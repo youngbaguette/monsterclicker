@@ -1,0 +1,23 @@
+header {
+	text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  width: 900px;
+  background-color: #77c4e5;
+  
+}
+
+p {
+  font-family: "Arial", sans-serif;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#monsterSection {
+	grid-row: span 2;
+}
