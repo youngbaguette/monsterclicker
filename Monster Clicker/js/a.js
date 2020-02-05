@@ -83,8 +83,8 @@ function buyLink(){
 
 // setting npc costs
 function updateHeroCost() {
-    heroCost = 15 + heroLvl + (Math.floor((1/8) * Math.pow(heroLvl, 2)));
+    heroCost = 15 + heroLvl + (Math.floor((1/8) * Math.pow(heroLvl, 3)));
 }
 function updateLinkCost() {
-    linkCost = 45 + linkLvl + (Math.floor((1/2) * Math.pow(linkLvl, 2)));
+    linkCost = 45 + linkLvl + (Math.floor((1/2) * Math.pow(linkLvl, 3)));
 }
