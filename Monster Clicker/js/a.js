@@ -1,3 +1,7 @@
+// CREATED BY:
+// DERRIN ESPINOLA
+// VADIM ANDREEV
+
 var killCount = 0;
 var heroLvl = 0;
 var heroCost = 15;
