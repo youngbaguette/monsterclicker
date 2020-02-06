@@ -1,23 +1,39 @@
+/* CREATED BY:
+DERRIN ESPINOLA
+VADIM ANDREEV */
+
 header {
 	text-align: center;
 }
 
 body {
   margin: 0 auto;
-  width: 900px;
+  width: 80%;
   background-color: #77c4e5;
-  
+
 }
 
 p {
   font-family: "Arial", sans-serif;
+	width: 70%;
 }
 
 main {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 #monsterSection {
 	grid-row: span 2;
+}
+
+#casinoSection {
+	/* grid-column: span 2; */
+	display: grid;
+	/* grid-template-columns: 1fr 1fr; */
+	/* border-top: 1px solid black; */
+}
+
+.clickable {
+	cursor: pointer;
 }

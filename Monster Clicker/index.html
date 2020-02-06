@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- CREATED BY:
+DERRIN ESPINOLA
+VADIM ANDREEV -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -11,35 +14,48 @@
     <header>
       <h1 colspan="2">Monster Clicker!</h1>
     </header>
-      
+
     <main>
 
-      
       <section id="monsterSection">
-        <a href=# onclick="kill()"><img src="assets/monster/monster1.png" alt="dangerous monster" height="350"></a>
+        <a onclick="kill()"><img class="clickable" src="assets/monster/monster1.png" alt="dangerous monster" height="350"></a>
         <br><br>
         <p>You've killed: <span id="monsterKills">0</span> Monsters</p>
         <p>Gold: <span id="gold">0</span></p>
         <br><br>
-        <button><a href="#" onclick="save()">Save</a></button>
-        <button><a href="#" onclick="load()">load</a></button>
+        <button><a class="clickable" onclick="save()">Save</a></button>
+        <button><a class="clickable" onclick="load()">load</a></button>
         <br><br>
       </section>
-      <section id="heroSection">
-        <h3>Buy 1 Hero</h3>
-        <button><a href="#" onCLick="buyHero()"><img src="assets/heroes/Hero.png" alt="weak hero"
+      <section id="heroes">
+        <section id="heroSection">
+          <h3>Buy 1 Hero</h3>
+          <button><a class="clickable" onCLick="buyHero()"><img src="assets/heroes/Hero.png" alt="weak hero"
+            height="100"></a></button>
+          <p id="costHero">15 Gold</p>
+          <p id="ammountHero"> You have 0 heroes</p>
+          <p>"I'm just here for the money"</p>
+        </section>
+        <section id="linkSection">
+          <h3>Buy 1 Link</h3>
+          <button><a class="clickable" onCLick="buyLink()"><img src="assets/heroes/Hero2.png" alt="Link"
           height="100"></a></button>
-        <p id="costHero">15 Gold</p>
-        <p id="ammountHero"> You have 0 heroes</p>
+          <p id="costLink">45 Gold</p>
+          <p id="ammountLink"> You have 0 Link</p>
+          <p>The hero of time to aid you on your great endeavors! Or is it just a cheeky dude in a costume?</p>
+        </section>
       </section>
-      <section id="linkSection">
-        <h3>Buy 1 Link</h3>
-        <button><a href="#" onCLick="buyLink()"><img src="assets/heroes/Hero2.png" alt="Link"
-        height="100"></a></button>
-        <p id="costLink">45 Gold</p>
-        <p id="ammountLink"> You have 0 Link</p>
+      <section id="casinoSection">
+          <div>
+              <h3>The Casino</h3>
+              <img src="assets/casino/casino.png" alt="casino stuff">
+          </div>
+          <div>
+              <p>Try your odds, you have the chance to double your current gold, but otherwise you lose everything! Choose wisely.</p>
+              <button class="clickable" type="button" id="doubleButton" onclick="doubleButton()" name="button">I'm Feeling Lucky</button>
+              <p id="doubleOutput"></p>
+          </div>
       </section>
-
       </main>
   </body>
 
