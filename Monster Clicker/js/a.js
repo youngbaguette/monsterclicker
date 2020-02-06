@@ -4,6 +4,7 @@ var heroCost = 15;
 var linkLvl = 0;
 var linkCost = 45;
 var playerGold = 0;
+var casinoWins = 0;
 
 // use to kill one monster
 function kill(){
@@ -84,14 +85,23 @@ function buyLink(){
 
 // casino stuff
 function doubleButton() {
-    var chance = Math.floor((Math.random() * 4) + 1)
+    var chance = Math.floor((Math.random() * 2) + 1)
 
     if (chance == 1) {
         playerGold *= 2;
-        document.getElementById("doubleOutput").innerHTML = "you did it u crazy bastard u doubled ur gold";
+        document.getElementById("doubleOutput").innerHTML = "Nice! You just doubled your gold";
+        for (let i = 0; i < casinoWins; i++) {
+          if (i == 0) {
+            document.getElementById("doubleOutput").innerHTML += " again ";
+          } else {
+            document.getElementById("doubleOutput").innerHTML += " and again ";
+          }
+        }
+        casinoWins++;
     } else {
         playerGold = Math.floor(playerGold / 2);
-        document.getElementById("doubleOutput").innerHTML = "lol";
+        document.getElementById("doubleOutput").innerHTML = "Them's the breaks, lady luck wasn't with you for that one.";
+        casinoWins = 0;
     }
     update();
 }
