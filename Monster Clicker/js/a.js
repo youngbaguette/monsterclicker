@@ -82,6 +82,20 @@ function buyLink(){
     }
 }
 
+// casino stuff
+function doubleButton() {
+    var chance = Math.floor((Math.random() * 4) + 1)
+
+    if (chance == 1) {
+        playerGold *= 2;
+        document.getElementById("doubleOutput").innerHTML = "you did it u crazy bastard u doubled ur gold";
+    } else {
+        playerGold = Math.floor(playerGold / 2);
+        document.getElementById("doubleOutput").innerHTML = "lol";
+    }
+    update();
+}
+
 // setting npc costs
 function updateHeroCost() {
     heroCost = 15 + heroLvl + (Math.floor((1/8) * Math.pow(heroLvl, 3)));

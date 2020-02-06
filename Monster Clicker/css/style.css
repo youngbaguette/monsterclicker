@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   width: 900px;
   background-color: #77c4e5;
-  
+
 }
 
 p {
@@ -20,4 +20,15 @@ main {
 
 #monsterSection {
 	grid-row: span 2;
+}
+
+#casinoSection {
+	grid-column: span 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-top: 1px solid black;
+}
+
+.clickable {
+	cursor: pointer;
 }

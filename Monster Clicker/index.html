@@ -14,34 +14,40 @@
 
     <main>
 
-
       <section id="monsterSection">
-        <a href=# onclick="kill()"><img src="assets/monster/monster1.png" alt="dangerous monster" height="350"></a>
+        <a onclick="kill()"><img class="clickable" src="assets/monster/monster1.png" alt="dangerous monster" height="350"></a>
         <br><br>
         <p>You've killed: <span id="monsterKills">0</span> Monsters</p>
         <p>Gold: <span id="gold">0</span></p>
         <br><br>
-        <button><a href="#" onclick="save()">Save</a></button>
-        <button><a href="#" onclick="load()">load</a></button>
+        <button><a class="clickable" onclick="save()">Save</a></button>
+        <button><a class="clickable" onclick="load()">load</a></button>
         <br><br>
       </section>
       <section id="heroSection">
         <h3>Buy 1 Hero</h3>
-        <button><a href="#" onCLick="buyHero()"><img src="assets/heroes/Hero.png" alt="weak hero"
+        <button><a class="clickable" onCLick="buyHero()"><img src="assets/heroes/Hero.png" alt="weak hero"
           height="100"></a></button>
         <p id="costHero">15 Gold</p>
         <p id="ammountHero"> You have 0 heroes</p>
       </section>
       <section id="linkSection">
         <h3>Buy 1 Link</h3>
-        <button><a href="#" onCLick="buyLink()"><img src="assets/heroes/Hero2.png" alt="Link"
+        <button><a class="clickable" onCLick="buyLink()"><img src="assets/heroes/Hero2.png" alt="Link"
         height="100"></a></button>
         <p id="costLink">45 Gold</p>
         <p id="ammountLink"> You have 0 Link</p>
       </section>
-      <section>
-          <h3>freddie mercury please</h3>
-          <img src="assets/casino/cassino.png" alt="i love you">
+      <section id="casinoSection">
+          <div>
+              <h3>freddie mercury please</h3>
+              <img src="assets/casino/casino.png" alt="i love you">
+          </div>
+          <div>
+              <p>double or nothing babyyyyy</p>
+              <button class="clickable" type="button" id="doubleButton" onclick="doubleButton()" name="button">try ur lick kid</button>
+              <p id="doubleOutput"></p>
+          </div>
       </section>
       </main>
   </body>
